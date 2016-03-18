@@ -1,0 +1,39 @@
+body {
+	background:#1f253d;
+	color:white;
+	margin:0;
+	font-family:sans-serif;
+	height:100vh;
+}
+
+aside {
+	background:#181C2B;
+	min-height:100vh;
+
+	width:20%;
+	padding:10px;
+
+	float:left;
+
+	.empty {
+		font-style:italic;
+		text-align:center;
+		display:block;
+	}
+}
+
+
+
+.button {
+	background:#11a8ab;
+
+	border-radius:2px;
+	padding:5px 10px;
+
+	text-decoration:none;
+
+	color:white;
+	display:inline-block;
+
+	border-bottom: 1px solid #247475;
+}
