@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+	<sourcemap type="string">
+		<value value="auto" default></value>
+		<value value="inline"></value>
+		<value value="file"></value>
+		<value value="none"></value>
+	</sourcemap>
+</options>

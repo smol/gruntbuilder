@@ -1,5 +1,11 @@
 <aside >
-	<span class="empty" data-ng-if="!modules || modules.length === 0">No packages.json loaded</span>
+	<span class="empty" data-ng-if="!config.modules || config.modules.length === 0">No packages.json loaded</span>
+
+	<ul>
+		<li data-ng-repeat="module in config.modules">
+			<span data-ng-bind="module.title"></span>
+		</li>
+	</ul>
 </aside>
 
 <main data-ui-view>

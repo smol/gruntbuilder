@@ -7,6 +7,7 @@ module.exports = function(grunt) {
 		dirs : {
 			modules : 'front/bower_components',
 			src : 'front/src',
+			configs : 'front/configs',
 			build : 'build'
 		},
 
@@ -16,6 +17,13 @@ module.exports = function(grunt) {
 				cwd : '<%= dirs.src %>',
 				src : '**/*.html',
 				dest : '<%= dirs.build %>',
+				flatten : false
+			},
+			configs : {
+				expand : true,
+				cwd : '<%= dirs.configs %>',
+				src : '**/*.xml',
+				dest : '<%= dirs.build %>/configs',
 				flatten : false
 			},
 			img : {
@@ -91,6 +99,15 @@ module.exports = function(grunt) {
 				},
 			},
 
+			configs : {
+				files : ['<%= dirs.configs %>/**/*.xml'],
+				tasks : ['copy:configs'],
+				options : {
+					atBegin : true,
+					livereload : true
+				}
+			},
+
 			html: {
 				files: ['<%= dirs.src %>/**/*.html'],
 				tasks: ['copy:html'],
@@ -104,6 +121,7 @@ module.exports = function(grunt) {
 				files: ['<%= dirs.src %>/**/*.scss'],
 				tasks: ['concat:css', 'sass'],
 				options: {
+					atBegin : true,
 					spawn: false,
 					livereload: true,
 				}

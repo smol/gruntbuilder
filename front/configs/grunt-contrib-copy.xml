@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+	<process type="Function" args="content, srcpath"></process>
+
+	<noProcess type="String"></noProcess>
+	<encoding type="String"></encoding>
+</options>
